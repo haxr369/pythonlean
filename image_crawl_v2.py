@@ -29,10 +29,6 @@ from PIL import Image
 https://www.naturing.net/o/669048?mission_seq=2379&obs_user_seq=15446
 """
 
-
-# In[3]:
-
-
 #원하는 디렉토리 만들기
 def createFolder(directory): 
     try: 
@@ -42,30 +38,23 @@ def createFolder(directory):
         print ('Error: Creating directory. ' + directory)
 
 
-# In[4]:
-
-
 plant_list =[]
-with open("자귀나무.txt") as f:
-    for i in f:
-        plant_list.append(i.strip('\n'))
-        
+"""
+with open("자귀나무.txt") as f: #자귀나무.txt에는 필요한 키워드를 적어놓은 것입니다.
+    for i in f: 
 
+plant_list에 검색하고자 하는 키워드를 작성합니다.
+    """
 
-# In[5]:
-
-
-plant_list
-
-
-# In[6]:
 
 
 #https://velog.io/@jungeun-dev/Python-%EC%9B%B9-%ED%81%AC%EB%A1%A4%EB%A7%81Selenium-%EA%B5%AC%EA%B8%80-%EC%9D%B4%EB%AF%B8%EC%A7%80-%EC%88%98%EC%A7%91
 
-
-# In[8]:
-
+"""
+main_keyword : 폴더 명
+sub_keyword : 검색 명
+img_numb : 각 sub_keyword 마다 다운로드 받는 이미지 수
+"""
 
 def download_im(main_keyword, sub_keyword, img_numb):
     
@@ -160,9 +149,6 @@ def download_im(main_keyword, sub_keyword, img_numb):
             print("문제 발생")
             pass
     driver.close()
-
-
-# In[ ]:
 
 
 for key in plant_list:
