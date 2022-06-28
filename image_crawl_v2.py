@@ -122,7 +122,7 @@ def download_im(main_keyword, sub_keyword, img_numb):
             save_posi = os.path.join(path, main_keyword+'{0:04d}'.format(count+main_long)+ff)
 
             urllib.request.urlretrieve(imgUrl, save_posi)
-
+            #기존 크롤러와의 차이는 이미지를 일단 다운로드 받고, 이미지의 header를 참고해서 실제 확장자를 이름에 적어주는 것입니다.
             img = Image.open(save_posi)
             if img.format != "JPEG":
                 now_for = img.format
