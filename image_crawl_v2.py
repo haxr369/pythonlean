@@ -1,7 +1,7 @@
 #!/usr/bin/env python
 # coding: utf-8
 
-# In[1]:
+
 
 
 from selenium import webdriver 
@@ -19,7 +19,14 @@ import json
 from PIL import Image
 
 
-# In[2]:
+plant_list =[]
+"""
+with open("자귀나무.txt") as f: #자귀나무.txt에는 필요한 키워드를 적어놓은 것입니다.
+    for i in f: 
+
+plant_list에 검색하고자 하는 키워드를 작성합니다.
+    """
+
 
 
 #https://yobbicorgi.tistory.com/29 코드 출처
@@ -38,13 +45,6 @@ def createFolder(directory):
         print ('Error: Creating directory. ' + directory)
 
 
-plant_list =[]
-"""
-with open("자귀나무.txt") as f: #자귀나무.txt에는 필요한 키워드를 적어놓은 것입니다.
-    for i in f: 
-
-plant_list에 검색하고자 하는 키워드를 작성합니다.
-    """
 
 
 
